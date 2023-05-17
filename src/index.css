@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital@0;1&family=Open+Sans:wght@300;400;500&family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/fonts/NeueHaasDisplayRoman.ttf");
+}
+
+
+body {
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #06070bc5;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #6de75577;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #6EE755;
+}
+
+.active{
+  color: #5eb84c;
+}
+
+nav #logo {
+  font-family: "Lobster ", cursive;
+}
+
+h1,
+h2 {
+  font-family: "Anton", sans-serif;
+}
+
+.hero-container {
+  background: linear-gradient(180deg, #0f1118 51.41%, rgba(17, 20, 29, 0) 100%);
+  /* mix-blend-mode: multiply; */
+  opacity: 0.7;
+}
+/* #loader,
+h1,
+.home h2,
+button,
+.Raleway {
+   font-family: "Raleway", sans-serif; 
+  font-family: "Helvetica Neue";
+} */
+
+.slick-track {
+  /* width: 100% !important; */
+  height: 100% !important;
+  /* padding: 0 2rem; */
+}
+
+.slick-dots {
+  padding-top: 1em;
+}
+
+.slick-dots li button {
+  border: 1px solid #d0d2d8;
+  border-radius: 50%;
+}
+
+li.slick-active {
+  background-color: #d0d2d8;
+  border-radius: 50%;
+}
+
+li.slick-active button::before {
+  color: transparent !important;
+}
+
+.slick-prev,
+.slick-next {
+  width: 30px;
+  height: 30px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #d0d2d8;
+  font-size: 30px;
+}
+
+/* .slick-prev {
+    left: -10px;
+}
+
+.slick-next{
+    right: -10px;
+} */
+
+.slick-dots li,
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+}
+
+.slick-dots li button::before {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+/* @media screen and (min-width: 768px) {
+  .slick-dots {
+    width: fit-content;
+  }
+} */
