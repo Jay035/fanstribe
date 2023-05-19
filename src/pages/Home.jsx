@@ -7,36 +7,124 @@ import Contact from "../components/Contact";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import { GetInvolved } from "../components/GetInvolved";
+import asset1 from "../assets/img-1.jpg";
+import asset2 from "../assets/img-2.jpg";
+import asset3 from "../assets/img-3.jpg";
+import asset4 from "../assets/img-4.jpg";
+import { Power3, gsap } from "gsap";
+import { useEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const container = useRef(null);
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      let panels = gsap.utils.toArray(".card").forEach((wrapper, i) => {
+        ScrollTrigger.create({
+          trigger: wrapper,
+          start: "top top",
+          pin: true,
+          pinSpacing: false,
+          //       start: 'center center',
+          // end: '+=600',
+          // snap: 1,
+        });
+        // gsap.to(wrapper.children, {
+        //   scale: "1.1",
+        // });
+        gsap.from(wrapper.children, {
+          // scale: "1.1",
+          ease: Power3.easeOut,
+          scrollTrigger: {
+            trigger: wrapper,
+            start: "top center",
+            end: "top top",
+            toggleActions: "play none reverse reset",
+          },
+        });
+      });
+      // let tops = panels.map((panel) =>
+      //   ScrollTrigger.create({ trigger: panel, start: "top top" })
+      // );
+      // panels.forEach((panel, i) => {
+      //   ScrollTrigger.create({
+      //     trigger: panel,
+      //     start: () =>
+      //       panel.offsetHeight < window.innerHeight
+      //         ? "top top"
+      //         : "bottom bottom",
+      //     pin: true,
+      //     markers:true,
+      //     pinSpacing: false,
+      //   });
+      // });
+      // ScrollTrigger.create({
+      //   snap: {
+      //     snapTo: (progress, self) => {
+      //       let panelStarts = tops.map((st) => st.start), // an Array of all the starting scroll positions. We do this on each scroll to make sure it's totally responsive. Starting positions may change when the user resizes the viewport
+      //         snapScroll = gsap.utils.snap(panelStarts, self.scroll()); // find the closest one
+      //       return gsap.utils.normalize(
+      //         0,
+      //         ScrollTrigger.maxScroll(window),
+      //         snapScroll
+      //       ); // snapping requires a progress value, so convert the scroll position into a normalized progress value between 0 and 1
+      //     },
+      //     duration: 0.5,
+      //   },
+      // });
+    }, container);
+    return () => ctx.revert();
+  }, []);
   return (
     <>
       <Navbar />
       <main className="home flex flex-col gap-6">
         <HeroSection />
-        <section className="text-center px-6 sm:px-14 md:px-20 xl:px-[270px] overflow-hidden py-6 sm:py-14 mx-auto grid gap-6 lg:gap-16">
-          <div className="">
+        <section className="text-center overflow-hidden py-6 sm:py-14 mx-auto grid gap-6 lg:gap-16">
+          <div className="px-[9.5vw]">
             <h2 className="text-3xl lg:text-[64px] leading-[100px] md:leading-[120px] text-[#EAECF0] capitalize mb-2">
-            Bringing Fans Together{" "}
+              Bringing Fans Together{" "}
               <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#6EE755]"></span>
             </h2>
             <p className="text-[#D0D5DD] text-lg lg:text-2xl mb-8">
-            Connect with sports fans across the globe who share the same passion and interests as you. Get access to curated events where you connect, chill and socialize with other fans. Find events in your area, connect, party, enjoy live match viewing experiences, play games, banter and enjoy being a fan at a premium level.
+              Connect with sports fans across the globe who share the same
+              passion and interests as you. Get access to curated events where
+              you connect, chill and socialize with other fans. Find events in
+              your area, connect, party, enjoy live match viewing experiences,
+              play games, banter and enjoy being a fan at a premium level.
             </p>
           </div>
 
-          <div className="">
-            {/* <Carousel
-              slideInterval={5000}
-              indicators={false}
-              leftControl=" "
-              rightControl=" "
-            >
-              <img src={asset1} alt="people having fun" />
-              <img src={asset2} alt="people having fun" />
-              <img src={asset3} alt="people having fun" />
-              <img src={asset4} alt="people having fun" />
-            </Carousel> */}
+          {/* <div className="card card_1">
+            <img
+              className="h-screen object-cover w-full "
+              src={asset4}
+              alt="people having fun"
+            />
+          </div> */}
+          {/* <div className="card card_2">
+            <img
+              className="h-screen object-cover w-full object-center"
+              src={asset1}
+              alt="people having fun"
+            />
+          </div> */}
+          <div className="card card_3">
+            <img
+              className="h-screen object-cover w-full object-center"
+              src={asset2}
+              alt="people having fun"
+            />
+          </div>
+          <div className="card card_4">
+            <img
+              className="h-screen object-cover w-full object-center"
+              src={asset3}
+              alt="people having fun"
+            />
           </div>
         </section>
 
@@ -66,7 +154,7 @@ export default function Home() {
           className="pt-28 px-6 md:px-14 xl:px-[130px] text-center"
         >
           <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-5">
-          Subscribe to our newsletter!
+            Subscribe to our newsletter!
           </h2>
           <p className="text-base md:text-xl text-[#D0D5DD] mb-8">
             Get news and updates delivered to your mailbox.
