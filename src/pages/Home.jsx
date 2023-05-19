@@ -50,7 +50,7 @@ export default function Home() {
       <Navbar />
       <main className="home flex flex-col gap-6">
         <HeroSection />
-        <section ref={container} className="text-center overflow-hidden py-6 sm:py-14 mx-auto grid gap-6 lg:gap-16">
+        <section ref={container} className="text-center overflow-hidden py-6 sm:py-14 mx-auto grid gap-16 lg:gap-20">
           <div className="px-[9.5vw]">
             <h2 className="text-3xl lg:text-[64px] leading-[100px] md:leading-[120px] text-[#EAECF0] capitalize mb-2">
               Bringing Fans Together{" "}

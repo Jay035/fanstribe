@@ -138,7 +138,7 @@ export function Navbar() {
           <HashLink
             smooth
             to="/#contact"
-            className="list_item border border-[#6EE755] bg-[#6EE755] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
+            className="list_item border border-[#6EE755] bg-[#6de755d0] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
           >
             CONTACT US
           </HashLink>
@@ -156,7 +156,7 @@ export function Navbar() {
         <HashLink
           smooth
           to="/#contact"
-          className="list_item border border-[#6EE755] bg-[#6EE755] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
+          className="list_item border border-[#6EE755] bg-[#6de755d0] text-center text-white px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
         >
           CONTACT US
         </HashLink>

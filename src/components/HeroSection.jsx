@@ -49,7 +49,7 @@ export function HeroSection() {
           </p> */}
           <Link
             to="/events"
-            className="text font-bold text-white px-8 bg-[#6EE755] py-2 text-lg rounded-[50px] md:text-2xl mt-4 hover:bg-[#6EE755]/75"
+            className="text font-bold text-white px-8 bg-[#6de755d0] py-2 text-lg rounded-[50px] md:text-2xl mt-4 hover:bg-[#6EE755]/75"
           >
             JOIN US
           </Link>
