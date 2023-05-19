@@ -135,7 +135,7 @@ export default function Home() {
           />
           <button
             type="submit"
-            className="px-[62.5px] block w-fit mx-auto bg-[#6EE755] rounded-[30px] py-3 mt-8 border border-[#6EE755] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)]"
+            className="px-[62.5px] block w-fit text-[#0e200a] mx-auto bg-[#6EE755] rounded-[30px] py-3 mt-8 shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)]"
           >
             Subscribe
           </button>
