@@ -28,15 +28,11 @@ export default function Home() {
           start: "top top",
           pin: true,
           pinSpacing: false,
-          //       start: 'center center',
           // end: '+=600',
           // snap: 1,
         });
-        // gsap.to(wrapper.children, {
-        //   scale: "1.1",
-        // });
         gsap.from(wrapper.children, {
-          // scale: "1.1",
+          scale: "1.1",
           ease: Power3.easeOut,
           scrollTrigger: {
             trigger: wrapper,
@@ -46,35 +42,6 @@ export default function Home() {
           },
         });
       });
-      // let tops = panels.map((panel) =>
-      //   ScrollTrigger.create({ trigger: panel, start: "top top" })
-      // );
-      // panels.forEach((panel, i) => {
-      //   ScrollTrigger.create({
-      //     trigger: panel,
-      //     start: () =>
-      //       panel.offsetHeight < window.innerHeight
-      //         ? "top top"
-      //         : "bottom bottom",
-      //     pin: true,
-      //     markers:true,
-      //     pinSpacing: false,
-      //   });
-      // });
-      // ScrollTrigger.create({
-      //   snap: {
-      //     snapTo: (progress, self) => {
-      //       let panelStarts = tops.map((st) => st.start), // an Array of all the starting scroll positions. We do this on each scroll to make sure it's totally responsive. Starting positions may change when the user resizes the viewport
-      //         snapScroll = gsap.utils.snap(panelStarts, self.scroll()); // find the closest one
-      //       return gsap.utils.normalize(
-      //         0,
-      //         ScrollTrigger.maxScroll(window),
-      //         snapScroll
-      //       ); // snapping requires a progress value, so convert the scroll position into a normalized progress value between 0 and 1
-      //     },
-      //     duration: 0.5,
-      //   },
-      // });
     }, container);
     return () => ctx.revert();
   }, []);
@@ -83,7 +50,7 @@ export default function Home() {
       <Navbar />
       <main className="home flex flex-col gap-6">
         <HeroSection />
-        <section className="text-center overflow-hidden py-6 sm:py-14 mx-auto grid gap-6 lg:gap-16">
+        <section ref={container} className="text-center overflow-hidden py-6 sm:py-14 mx-auto grid gap-6 lg:gap-16">
           <div className="px-[9.5vw]">
             <h2 className="text-3xl lg:text-[64px] leading-[100px] md:leading-[120px] text-[#EAECF0] capitalize mb-2">
               Bringing Fans Together{" "}
