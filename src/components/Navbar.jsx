@@ -89,20 +89,20 @@ export function Navbar() {
               Events
             </NavLink>
           </p>
-          {/* <p
+          <p
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
             }}
           >
             <NavLink
-              to="/"
+              to="/activities"
               className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             >
-              Marketplace
+              Activities
             </NavLink>
           </p>
-          <p
+          {/* <p
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);

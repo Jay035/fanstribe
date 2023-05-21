@@ -7,10 +7,10 @@ import Contact from "../components/Contact";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import { GetInvolved } from "../components/GetInvolved";
-import asset1 from "../assets/img-1.jpg";
+import asset1 from "../assets/img-5.jpg";
 import asset2 from "../assets/img-2.jpg";
 import asset3 from "../assets/img-3.jpg";
-import asset4 from "../assets/img-4.jpg";
+import asset4 from "../assets/img-6.jpg";
 import { Power3, gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -50,7 +50,10 @@ export default function Home() {
       <Navbar />
       <main className="home flex flex-col gap-6">
         <HeroSection />
-        <section ref={container} className="text-center overflow-hidden py-6 sm:py-14 mx-auto grid gap-16 lg:gap-20">
+        <section
+          ref={container}
+          className="text-center overflow-hidden py-6 sm:py-14 mx-auto grid gap-16 lg:gap-20"
+        >
           <div className="px-[9.5vw]">
             <h2 className="text-3xl lg:text-[64px] leading-[100px] md:leading-[120px] text-[#EAECF0] capitalize mb-2">
               Bringing Fans Together{" "}
@@ -65,20 +68,20 @@ export default function Home() {
             </p>
           </div>
 
-          {/* <div className="card card_1">
+          <div className="card card_1">
             <img
-              className="h-screen object-cover w-full "
+              className="h-screen object-cover w-full object-top"
               src={asset4}
               alt="people having fun"
             />
-          </div> */}
-          {/* <div className="card card_2">
+          </div>
+          <div className="card card_2">
             <img
               className="h-screen object-cover w-full object-center"
               src={asset1}
               alt="people having fun"
             />
-          </div> */}
+          </div>
           <div className="card card_3">
             <img
               className="h-screen object-cover w-full object-center"

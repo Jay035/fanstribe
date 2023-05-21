@@ -11,7 +11,7 @@ export default function AboutUs() {
           <section>
             <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-5">
               Partnerships
-              <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#EF5B44]"></span>
+              <span className="p-[3px] text-[1px] ml-[4px] mb-[1px] bg-[#6EE755]"></span>
             </h2>
             <p className="text-base md:text-xl text-[#D0D5DD] mb-8">
           We look to work with brands that would like to partner or provide sponsorship to drive our vision of uniting sports fans across the world. Send an email to 
