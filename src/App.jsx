@@ -11,7 +11,7 @@ const Activities = lazy(() => import("./pages/Activities"));
 
 function App() {
   return (
-    <div className="scroll-smooth bg-[#06070B] text-white/90 h-full">
+    <div className="scroll-smooth bg-[#06070B] text-white/90 h-full w-full">
       <Router>
         <Suspense fallback={<Loader />}>
           <Routes>

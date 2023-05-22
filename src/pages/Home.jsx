@@ -68,13 +68,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="card card_1">
+          {/* <div className="card card_1">
             <img
               className="h-screen object-cover w-full object-top"
               src={asset4}
               alt="people having fun"
             />
-          </div>
+          </div> */}
           <div className="card card_2">
             <img
               className="h-screen object-cover w-full object-center"

@@ -1,6 +1,6 @@
-import img1 from "../assets/testimonial-avatar-1.png";
-import img2 from "../assets/testimonial-avatar-2.png";
-import img3 from "../assets/testimonial-avatar-3.png";
+import img1 from "../assets/testimonial-avatar-1.jpg";
+import img2 from "../assets/testimonial-avatar-2.jpg";
+import img3 from "../assets/testimonial-avatar-3.jpg";
 
 export function Testimonials() {
   return (
@@ -17,9 +17,9 @@ export function Testimonials() {
             me and I’ve also picked an interest in basketball after watching a
             couple of games. ”
           </h2>
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-3 items-center">
             <img
-              className="w-14 sm:w-[66px] sm:h-[66px]"
+              className="w-14 h-14 object-cover rounded-full "
               src={img3}
               alt="img 1"
             />
@@ -34,11 +34,11 @@ export function Testimonials() {
             “ Being a fan got more interesting with Fanstribe. I’ve had so much
             fun while connecting and vibing with other fans. ”
           </h2>
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-3 items-center">
             <img
-              className="w-14 sm:w-[66px] sm:h-[66px]"
+              className="w-14 h-14 object-cover rounded-full"
               src={img2}
-              alt="img 1"
+              alt="img 2"
             />
             <div className="">
               <h1 className="w-fit text-base">Declan</h1>
@@ -51,11 +51,11 @@ export function Testimonials() {
             “ Fanstribe is all about entertainment. It unites fans in a special
             way and I’m proud to be a part of this unique community. ”
           </h2>
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-3 items-center">
             <img
-              className="w-14 sm:w-[66px] sm:h-[66px]"
+              className="w-14 h-14 object-cover rounded-full"
               src={img1}
-              alt="img 1"
+              alt="img 3"
             />
             <div className="">
               <h1 className="w-fit text-base">Annabelle</h1>

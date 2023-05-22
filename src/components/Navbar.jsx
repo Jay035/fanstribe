@@ -48,7 +48,7 @@ export function Navbar() {
       >
         <div className="flex flex-col items-center gap-6 mt-40 lg:mt-0 lg:flex-row">
           <p
-          className="list_item"
+            className="list_item"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -56,13 +56,13 @@ export function Navbar() {
           >
             <NavLink
               to="/"
-              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
+              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
             >
               Home
             </NavLink>
           </p>
           <p
-          className="list_item"
+            className="list_item"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -70,13 +70,13 @@ export function Navbar() {
           >
             <NavLink
               to="/aboutUs"
-              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
+              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
             >
               About us
             </NavLink>
           </p>
           <p
-          className="list_item"
+            className="list_item"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -84,7 +84,7 @@ export function Navbar() {
           >
             <NavLink
               to="/events"
-              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
+              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
             >
               Events
             </NavLink>
@@ -97,7 +97,7 @@ export function Navbar() {
           >
             <NavLink
               to="/activities"
-              className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
+              className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
             >
               Activities
             </NavLink>
@@ -128,7 +128,7 @@ export function Navbar() {
           <HashLink
             smooth
             to="/#contact"
-            className="list_item border border-[#6EE755] bg-[#6de755d0] text-center text-[#0e200a] px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
+            className="list_item border border-[#6EE755] bg-[#6de755d0] text-center text-[#0e200a] px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:text-white"
           >
             CONTACT US
           </HashLink>
@@ -146,7 +146,7 @@ export function Navbar() {
         <HashLink
           smooth
           to="/#contact"
-          className=" border border-[#6EE755] bg-[#6de755d0] text-center text-[#0e200a] px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:border hover:border-[#EAECF0]"
+          className="list_item border border-[#6EE755] bg-[#6de755d0] text-center text-[#0e200a] px-[39.5px] py-[10px] rounded-[50px] hover:bg-transparent hover:text-white"
         >
           CONTACT US
         </HashLink>
