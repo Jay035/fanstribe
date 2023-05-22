@@ -16,9 +16,9 @@ export default function Footer() {
         {/* <a href="#">Privacy policy </a> */}
         <Link to="/partnerships">Partnerships</Link>
         {/* <a href="#">Advertise</a> */}
-        <HashLink
-            smooth
-            to="/#contact">Contact us</HashLink>
+        <HashLink smooth to="/#contact">
+          Contact us
+        </HashLink>
       </div>
 
       {/* (Facebook, Instagram and Twitter logos)  */}
@@ -26,10 +26,14 @@ export default function Footer() {
       <div className="flex items-center justify-center gap-4">
         <i className="ri-twitter-fill text-2xl"></i>
         <i className="ri-facebook-circle-fill text-2xl"></i>
-        <i className="ri-instagram-fill text-2xl"></i>
+        <a href="https://www.instagram.com/fanstribenigeria/">
+          <i className="ri-instagram-fill text-2xl"></i>
+        </a>
       </div>
 
-      <p className="font-medium mt-3">© 2023 – Fanstribe. All rights reserved</p>
+      <p className="font-medium mt-3">
+        © 2023 – Fanstribe. All rights reserved
+      </p>
     </section>
   );
 }
