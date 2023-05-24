@@ -2,6 +2,7 @@ import { lazy, Suspense, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const Home = lazy(() => import("./pages/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="scroll-smooth bg-[#06070B] text-white/90 h-full w-full">
       <Router>
+        <ScrollToTop />
         <Suspense fallback={<Loader />}>
           <Routes>
             <Route exact path="/" element={<Home />} />
@@ -29,15 +31,3 @@ function App() {
 }
 
 export default App;
-
-export const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  swipeToSlide: true,
-  autoplay: true,
-  autoplaySpeed: 3500,
-  cssEase: "linear",
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};

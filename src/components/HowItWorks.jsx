@@ -5,7 +5,7 @@ import briefcase from "../assets/briefcase.svg";
 export function HowItWorks() {
   return (
     <div className="mt-4 py-6 px-6 md:px-14 xl:px-[130px]">
-      <h2 className="text-3xl leading-[100px] md:leading-[120px] text-[#EAECF0] text-center mb-2">
+      <h2 className="text-3xl md:text-[32px] leading-[100px] md:leading-[120px] text-[#EAECF0] text-center mb-2">
         HOW IT WORKS{" "}
         <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#6EE755]"></span>
       </h2>

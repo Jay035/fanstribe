@@ -2,13 +2,15 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import { events } from "../data/data";
+import Transition from "../components/Transition";
 
 export default function Events() {
   return (
     <>
       <Navbar />
-      <main className="text-center mt-10 pb-20 px-6 md:px-12 h-fit min-h-[90vh]">
-        <h2 className="text-2xl capitalize mb-12 font-medium">
+      <Transition />
+      <main className="text-center mt-10 pb-20 px-[9.5vw] h-fit min-h-[90vh]">
+        <h2 className="text-center text-3xl md:text-[42px] leading-[100px] tracking-tight capitalize mb-5">
           Our Events{" "}
           <span className="p-[3px] text-[1px] ml-[4px] mb-[1px] bg-[#6EE755]"></span>
         </h2>
@@ -35,4 +37,3 @@ export default function Events() {
     </>
   );
 }
-

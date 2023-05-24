@@ -1,13 +1,15 @@
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
-import friends from "../assets/friends.jpg";
+import friends from "../assets/gathering.jpg";
+import Transition from "../components/Transition";
 
 export default function AboutUs() {
   return (
     <>
       <Navbar />
+      <Transition />
       <main>
-        <div className="px-6 sm:px-14 md:px-20 xl:px-[270px] mb-8">
+        <div className="px-[9.5vw] mb-8">
           <section>
             <h2 className="text-center text-3xl md:text-[42px] leading-[100px] tracking-tight capitalize mb-5">
               About Us

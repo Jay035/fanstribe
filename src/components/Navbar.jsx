@@ -4,6 +4,7 @@ import { HashLink } from "react-router-hash-link";
 import { Power3, gsap } from "gsap";
 import { useRef } from "react";
 import { useLayoutEffect } from "react";
+import navlogo from "../assets/logo.png";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +13,7 @@ export function Navbar() {
   let hamburger = useRef(null);
   let nav = useRef(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.from(".list_item", {
         opacity: 0,
@@ -30,14 +31,12 @@ export function Navbar() {
   return (
     <nav
       ref={nav}
-      className="flex justify-between items-center bg-[#06070B] tracking-tight w-full gap-x-12 py-6 px-8 sm:px-14 xl:px-20"
+      className="flex justify-between items-center bg-[#06070B] tracking-tight w-full gap-x-12 py-10 px-8 sm:px-14 xl:px-20"
     >
       <section>
-        {/* <Link to="/">
-          <h1 id="logo" className="text-2xl font-semibold w-fit">
-            Magno
-          </h1>
-        </Link> */}
+        <Link to="/">
+          <img src={navlogo} alt="logo" className="w-12" />
+        </Link>
       </section>
       <section
         className={`${
@@ -90,6 +89,7 @@ export function Navbar() {
             </NavLink>
           </p>
           <p
+            className="list_item"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -97,7 +97,7 @@ export function Navbar() {
           >
             <NavLink
               to="/activities"
-              className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
+              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
             >
               Activities
             </NavLink>
