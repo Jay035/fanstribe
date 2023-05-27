@@ -14,8 +14,15 @@ export default function Events() {
           Our Events{" "}
           <span className="p-[3px] text-[1px] ml-[4px] mb-[1px] bg-[#6EE755]"></span>
         </h2>
+
         {events.length > 0 ? (
-          events?.map((event) => <div className=""></div>)
+          <div className="grid md:grid-cols-2 lg:grid-cols-3">
+            {events?.map((event, index) => (
+              <a key={index} href={event?.link} className="" target="_blank" >
+                <img src={event.imgUrl} alt="event image" />
+              </a>
+            ))}
+          </div>
         ) : (
           <div className="flex flex-col justify-center items-center h-[50vh]">
             <p className="text-2xl md:text-3xl">

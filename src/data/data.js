@@ -1,4 +1,11 @@
-export const events = [];
+import event1 from "../assets/event-1.jpg";
+
+export const events = [
+    {
+        imgUrl: event1,
+        link: "https://tix.africa/discover/fanstribe"
+    },
+];
 
 // ACTIVITIES 
 import img1 from "../assets/img-6.jpg";
