@@ -135,7 +135,7 @@ export default function Home() {
         <Testimonials />
 
         <form onSubmit={submitEmail} className="pt-28 px-[9.5vw] text-center">
-          <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-2">
+          <h2 className="text-center text-3xl md:text-[42px] md:leading-[100px] tracking-tight capitalize mb-6">
             Subscribe to our newsletter!
           </h2>
           <p className="text-base md:text-xl text-[#D0D5DD] mb-6">
@@ -147,7 +147,7 @@ export default function Home() {
             id="email"
             onChange={(e) => setUserEmail(e.target.value)}
             placeholder="Your email address"
-            className="w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-2 md:py-3 rounded-lg"
+            className=" w-full max-w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-2 md:py-3 rounded-lg"
           />
           <button
             type="submit"
