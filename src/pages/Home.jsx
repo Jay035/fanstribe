@@ -12,14 +12,33 @@ import asset2 from "../assets/img-2.jpg";
 import asset3 from "../assets/img-3.jpg";
 import asset4 from "../assets/img-6.jpg";
 import { Power3, gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Transition from "../components/Transition";
+import "firebase/database";
+import { addDoc, collection } from "@firebase/firestore";
+import { db } from "../config/config";
+import { toast } from "react-toastify";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const container = useRef(null);
+  const [userEmail, setUserEmail] = useState("");
+  const usersEmailRef = collection(db, "newsletter-subscription");
+
+  const submitEmail = async (e) => {
+    e.preventDefault();
+    try {
+      console.log(userEmail);
+      await addDoc(usersEmailRef, { email: userEmail });
+      toast.success("Congratulations, you have subscribed to our newsletter");
+      setUserEmail("");
+    } catch (err) {
+      console.log(err.message);
+      toast.error(err.message);
+    }
+  };
 
   // useEffect(() => {
   //   let ctx = gsap.context(() => {
@@ -53,7 +72,7 @@ export default function Home() {
       <main className="home flex flex-col gap-6">
         <HeroSection />
         <section
-          ref={container}
+          // ref={container}
           className="text-center overflow-hidden py-6 sm:py-14 mx-auto "
         >
           <div className="px-[9.5vw] mb-20">
@@ -70,13 +89,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* <div className="card card_1">
-            <img
-              className="h-screen object-cover w-full object-top"
-              src={asset4}
-              alt="people having fun"
-            />
-          </div> */}
           <div className="card card_2">
             <img
               className="h-screen object-cover w-full object-center"
@@ -121,10 +133,8 @@ export default function Home() {
 
         {/* Testimonials */}
         <Testimonials />
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className="pt-28 px-[9.5vw] text-center"
-        >
+
+        <form onSubmit={submitEmail} className="pt-28 px-[9.5vw] text-center">
           <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-2">
             Subscribe to our newsletter!
           </h2>
@@ -133,13 +143,15 @@ export default function Home() {
           </p>
           <input
             type="email"
-            name=""
-            id=""
+            value={userEmail}
+            id="email"
+            onChange={(e) => setUserEmail(e.target.value)}
             placeholder="Your email address"
             className="w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-2 md:py-3 rounded-lg"
           />
           <button
             type="submit"
+            disabled={userEmail === ""}
             className="px-[62.5px] block w-fit text-[#0e200a] mx-auto bg-[#6EE755] rounded-[30px] py-3 mt-8 shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)]"
           >
             Subscribe
