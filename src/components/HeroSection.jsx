@@ -25,7 +25,7 @@ export function HeroSection() {
     <section ref={hero} className="relative grid w-full md:items-center gap-16 h-screen">
       <img
         src={heroImg}
-        className="hero-img h-screen z-[0] object-cover object-center w-full"
+        className="hero-img h-screen z-[0] object-cover object-left-top md:object-right w-full"
         alt="hero img"
       />
       {/* hero container */}
@@ -51,7 +51,7 @@ export function HeroSection() {
             to="/events"
             className="text font-bold text-white px-8 bg-[#6de755d0] py-2 text-lg rounded-[50px] md:text-2xl mt-4 hover:bg-[#6EE755]/75"
           >
-            JOIN US
+           GET STARTED
           </Link>
         </div>
       </div>

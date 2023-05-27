@@ -31,7 +31,7 @@ export function Navbar() {
   return (
     <nav
       ref={nav}
-      className="flex justify-between items-center bg-[#06070B] tracking-tight w-full gap-x-12 py-10 px-8 sm:px-14 xl:px-20"
+      className="flex justify-between items-center bg-[#06070B] tracking-tight w-full gap-x-12 py-6 px-[9.5vw]"
     >
       <section>
         <Link to="/">

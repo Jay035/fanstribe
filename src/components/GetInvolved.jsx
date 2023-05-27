@@ -8,7 +8,7 @@ export function GetInvolved() {
           Get Involved{" "}
           <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#6EE755]"></span>
         </h2>
-        <p className="text-lg text-[#D0D5DD] lg:text-xl mb-6">
+        <p className="text-lg md:text-xl text-[#D0D5DD] mb-6">
           We are looking to build fan culture and take fan experiences to a
           different level. Meet other fans, build friendships and have fun as
           well as other perks

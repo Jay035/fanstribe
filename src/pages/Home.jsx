@@ -21,31 +21,31 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const container = useRef(null);
 
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      let panels = gsap.utils.toArray(".card").forEach((wrapper, i) => {
-        ScrollTrigger.create({
-          trigger: wrapper,
-          start: "top top",
-          pin: true,
-          pinSpacing: false,
-          // end: '+=600',
-          // snap: 1,
-        });
-        gsap.from(wrapper.children, {
-          scale: "1.1",
-          ease: Power3.easeOut,
-          scrollTrigger: {
-            trigger: wrapper,
-            start: "top center",
-            end: "top top",
-            toggleActions: "play none reverse reset",
-          },
-        });
-      });
-    }, container);
-    return () => ctx.revert();
-  }, []);
+  // useEffect(() => {
+  //   let ctx = gsap.context(() => {
+  //     let panels = gsap.utils.toArray(".card").forEach((wrapper, i) => {
+  //       ScrollTrigger.create({
+  //         trigger: wrapper,
+  //         start: "top top",
+  //         pin: true,
+  //         pinSpacing: false,
+  //         // end: '+=600',
+  //         // snap: 1,
+  //       });
+  //       gsap.from(wrapper.children, {
+  //         scale: "1.1",
+  //         ease: Power3.easeOut,
+  //         scrollTrigger: {
+  //           trigger: wrapper,
+  //           start: "top center",
+  //           end: "top top",
+  //           toggleActions: "play none reverse reset",
+  //         },
+  //       });
+  //     });
+  //   }, container);
+  //   return () => ctx.revert();
+  // }, []);
   return (
     <>
       <Navbar />
@@ -54,9 +54,9 @@ export default function Home() {
         <HeroSection />
         <section
           ref={container}
-          className="text-center overflow-hidden py-6 sm:py-14 mx-auto grid gap-16 lg:gap-20"
+          className="text-center overflow-hidden py-6 sm:py-14 mx-auto "
         >
-          <div className="px-[9.5vw]">
+          <div className="px-[9.5vw] mb-20">
             <h2 className="text-3xl lg:text-[64px] leading-[100px] md:leading-[120px] text-[#EAECF0] capitalize mb-2">
               Bringing Fans Together{" "}
               <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#6EE755]"></span>
@@ -123,12 +123,12 @@ export default function Home() {
         <Testimonials />
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="pt-28 px-6 md:px-14 xl:px-[130px] text-center"
+          className="pt-28 px-[9.5vw] text-center"
         >
-          <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-5">
+          <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-2">
             Subscribe to our newsletter!
           </h2>
-          <p className="text-base md:text-xl text-[#D0D5DD] mb-8">
+          <p className="text-base md:text-xl text-[#D0D5DD] mb-6">
             Get news and updates delivered to your mailbox.
           </p>
           <input
@@ -136,7 +136,7 @@ export default function Home() {
             name=""
             id=""
             placeholder="Your email address"
-            className="w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-3 rounded-lg"
+            className="w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-2 md:py-3 rounded-lg"
           />
           <button
             type="submit"
