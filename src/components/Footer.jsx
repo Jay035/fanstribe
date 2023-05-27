@@ -21,14 +21,18 @@ export default function Footer() {
       {/* (Facebook, Instagram and Twitter logos)  */}
       {/* <BsTwitter /> */}
       <div className="flex items-center justify-center gap-4">
-        <i className="ri-twitter-fill text-2xl"></i>
-        <i className="ri-facebook-circle-fill text-2xl"></i>
+        <a href="http://tiktok.com/@fanstribenigeria">
+          <i className="ri-tiktok-fill text-2xl"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100093159031572&mibextid=ZbWKwL">
+          <i className="ri-facebook-circle-fill text-2xl"></i>
+        </a>
         <a href="https://www.instagram.com/fanstribenigeria/">
           <i className="ri-instagram-fill text-2xl"></i>
         </a>
       </div>
 
-      <p className="font-medium mt-3">
+      <p className="font-medium text-sm mt-3">
         © 2023 – Fanstribe. All rights reserved
       </p>
     </section>
