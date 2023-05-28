@@ -21,6 +21,7 @@ export default function Activities() {
                 className="min-h-[240px] max-h-[250px] mx-auto w-[340px] object-center object-cover"
                 src={item.imgUrl}
                 alt={item.title}
+                loading="lazy"
               />
               <div className="mt-3 text-white">
                 <h1 className="text-2xl">{item.title}</h1>

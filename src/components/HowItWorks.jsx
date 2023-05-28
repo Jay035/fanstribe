@@ -12,7 +12,7 @@ export function HowItWorks() {
       <div className="grid gap-8 lg:gap-16 lg:grid-cols-2 items-start lg:items-center justify-center py-10 mx-6 rounded-lg">
         {/* card 1 */}
         <div className=" text-center flex items-center flex-col py-8 md:py-0 md:px-8 w-full">
-          <img src={zap} alt="" />
+          <img src={zap} loading="lazy" alt="" />
           <h2 className="text-white text-2xl mt-8 mb-2">Explore</h2>
           <p className="text-[#D0D5DD] text-lg md:text-xl">
             Explore events and get a ticket
@@ -20,7 +20,7 @@ export function HowItWorks() {
         </div>
         {/* card 2 */}
         <div className="text-center flex items-center flex-col w-full py-8 lg:py-0 lg:px-8 border-t border-[#344054] lg:border-t-0 lg:border-l">
-          <img src={briefcase} alt="" />
+          <img src={briefcase} loading="lazy" alt="" />
           <h2 className="text-white text-2xl mt-8 mb-2">
             {" "}
             Access our events and activities

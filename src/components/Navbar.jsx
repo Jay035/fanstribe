@@ -35,7 +35,7 @@ export function Navbar() {
     >
       <section>
         <Link to="/">
-          <img src={navlogo} alt="logo" className="w-12" />
+          <img src={navlogo} alt="logo" loading="lazy" className="w-12" />
         </Link>
       </section>
       <section

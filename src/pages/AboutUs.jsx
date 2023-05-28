@@ -26,7 +26,7 @@ export default function AboutUs() {
             </p>
           </section>
           <section>
-            <img src={friends} alt="friends laughing" />
+            <img src={friends} loading="lazy" alt="friends laughing" />
           </section>
         </div>
       </main>

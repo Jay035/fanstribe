@@ -19,7 +19,7 @@ export default function Events() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3">
             {events?.map((event, index) => (
               <a key={index} href={event?.link} className="" target="_blank" >
-                <img src={event.imgUrl} alt="event image" />
+                <img src={event.imgUrl} loading="lazy" alt="event image" />
               </a>
             ))}
           </div>

@@ -22,6 +22,7 @@ export function Testimonials() {
               className="w-14 h-14 object-cover rounded-full "
               src={img3}
               alt="img 1"
+              loading="lazy"
             />
             <div className="">
               <h1 className="w-fit text-base">Chukwuebuka </h1>
@@ -39,6 +40,7 @@ export function Testimonials() {
               className="w-14 h-14 object-cover rounded-full"
               src={img2}
               alt="img 2"
+              loading="lazy"
             />
             <div className="">
               <h1 className="w-fit text-base">Declan</h1>
@@ -55,6 +57,7 @@ export function Testimonials() {
             <img
               className="w-14 h-14 object-cover object-top rounded-full"
               src={img1}
+              loading="lazy"
               alt="img 3"
             />
             <div className="">
