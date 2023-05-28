@@ -21,11 +21,7 @@ export function Benefits() {
             • Banter, participate in contests and win gifts{" "}
           </h5>
         </div>
-        <div className=" border-t border-[#475467]">
-          <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
-            • Build a network{" "}
-          </h5>
-        </div>
+
         <div className=" border-t border-[#475467] ">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
             • Party, enjoy good music, food and drinks{" "}
