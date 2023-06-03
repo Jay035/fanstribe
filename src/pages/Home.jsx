@@ -30,7 +30,6 @@ export default function Home() {
   const submitEmail = async (e) => {
     e.preventDefault();
     try {
-      console.log(userEmail);
       await addDoc(usersEmailRef, { email: userEmail });
       toast.success("Congratulations, you have subscribed to our newsletter");
       setUserEmail("");

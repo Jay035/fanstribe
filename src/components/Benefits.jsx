@@ -1,6 +1,6 @@
 export function Benefits() {
   return (
-    <div className=" pt-6 px-6 md:px-14 xl:px-[130px]">
+    <div className="pt-6 px-[9.5vw]">
       <h2 className="text-center leading-[100px] md:leading-[120px] text-2xl md:text-[32px] text-[#EAECF0] capitalize">
         What you get{" "}
         <span className="p-[2px] text-[1px] ml-[4px] mb-[1px] bg-[#6EE755]"></span>
