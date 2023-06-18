@@ -8,7 +8,7 @@ export default function Activities() {
     <>
       <Navbar />
       <Transition />
-      <main className="text-center mt-10 pb-20 px-[9.5vw] w-full">
+      <main className="text-center mt-10 pb-20 px-[9.5vw] h-fit min-h-[90vh] w-full">
 
         <h2 className="text-center text-3xl md:text-[42px] leading-[100px] tracking-tight capitalize mb-5">
           Our activities{" "}

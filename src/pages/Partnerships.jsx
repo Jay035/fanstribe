@@ -9,7 +9,7 @@ export default function AboutUs() {
       <Navbar />
       <Transition />
       <main>
-        <div className="px-6 sm:px-14 md:px-20 xl:px-[270px] mb-8">
+        <div className="px-6 sm:px-14 md:px-20 xl:px-[270px] mb-8 h-fit min-h-[90vh]">
           <section>
             <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-5">
               Partnerships
