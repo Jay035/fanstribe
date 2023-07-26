@@ -16,7 +16,7 @@ export default function Events() {
         </h2>
 
         {events.length > 0 ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {events?.map((event, index) => (
               <a key={index} href={event?.link} className="" target="_blank" >
                 <img className="hover:opacity-70 h-fit max-h-[304px] w-full object-cover object-center" src={event.imgUrl} loading="lazy" alt="event image" />
