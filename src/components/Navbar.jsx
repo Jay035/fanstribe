@@ -102,6 +102,20 @@ export function Navbar() {
               Activities
             </NavLink>
           </p>
+          <p
+            className="list_item"
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen((prevState) => !prevState);
+            }}
+          >
+            <NavLink
+              to="/join"
+              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
+            >
+              Join our community
+            </NavLink>
+          </p>
           {/* <p
             onClick={(e) => {
               e.preventDefault();

@@ -4,8 +4,6 @@ import { HeroSection } from "../components/HeroSection";
 import { HowItWorks } from "../components/HowItWorks";
 import { Testimonials } from "../components/Testimonials";
 import Contact from "../components/Contact";
-import { Navbar } from "../components/Navbar";
-import Footer from "../components/Footer";
 import { GetInvolved } from "../components/GetInvolved";
 import asset1 from "../assets/img-5.jpg";
 import asset2 from "../assets/img-2.jpg";
@@ -65,100 +63,96 @@ export default function Home() {
   //   return () => ctx.revert();
   // }, []);
   return (
-    <>
-      <Navbar />
+    <main className="home flex flex-col gap-6">
       <Transition />
-      <main className="home flex flex-col gap-6">
-        <HeroSection />
-        <section
-          // ref={container}
-          className="text-center overflow-hidden py-6 sm:py-14 mx-auto "
-        >
-          <div className="px-[9.5vw] mb-20">
-            <h2 className="text-3xl lg:text-[64px] leading-[100px] md:leading-[120px] text-[#EAECF0] capitalize mb-2">
-              Bringing Fans Together{" "}
-              <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#6EE755]"></span>
-            </h2>
-            <p className="text-[#D0D5DD] text-lg lg:text-2xl mb-8">
-              Connect with sports fans across the globe who share the same
-              passion and interests as you. Get access to curated events where
-              you connect, chill and socialize with other fans. Find events in
-              your area, connect, party, enjoy live match viewing experiences,
-              play games, banter and enjoy being a fan at a premium level.
-            </p>
-          </div>
+      <HeroSection />
+      <section
+        // ref={container}
+        className="text-center overflow-hidden py-6 sm:py-14 mx-auto "
+      >
+        <div className="px-[9.5vw] mb-20">
+          <h2 className="text-3xl lg:text-[64px] leading-[100px] md:leading-[120px] text-[#EAECF0] capitalize mb-2">
+            Bringing Fans Together{" "}
+            <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#6EE755]"></span>
+          </h2>
+          <p className="text-[#D0D5DD] text-lg lg:text-2xl mb-8">
+            Connect with sports fans across the globe who share the same passion
+            and interests as you. Get access to curated events where you
+            connect, chill and socialize with other fans. Find events in your
+            area, connect, party, enjoy live match viewing experiences, play
+            games, banter and enjoy being a fan at a premium level.
+          </p>
+        </div>
 
-          <div className="card card_2">
-            <img
-              className="h-screen object-cover w-full object-center"
-              src={asset1}
-              alt="people having fun"
-            />
-          </div>
-          <div className="card card_3">
-            <img
-              className="h-screen object-cover w-full object-center"
-              src={asset2}
-              alt="people having fun"
-            />
-          </div>
-          <div className="card card_4">
-            <img
-              className="h-screen object-cover w-full object-center"
-              src={asset3}
-              alt="people having fun"
-            />
-          </div>
-        </section>
+        <div className="card card_2">
+          <img
+            className="h-screen object-cover w-full object-center"
+            src={asset1}
+            alt="people having fun"
+          />
+        </div>
+        <div className="card card_3">
+          <img
+            className="h-screen object-cover w-full object-center"
+            src={asset2}
+            alt="people having fun"
+          />
+        </div>
+        <div className="card card_4">
+          <img
+            className="h-screen object-cover w-full object-center"
+            src={asset3}
+            alt="people having fun"
+          />
+        </div>
+      </section>
 
-        {/* What you get */}
-        <Benefits />
+      {/* What you get */}
+      <Benefits />
 
-        {/* Our events & activities */}
-        {/* <div className="px-6 md:px-24 mb-28 "> */}
+      {/* Our events & activities */}
+      {/* <div className="px-6 md:px-24 mb-28 "> */}
 
-        {/* <Link
+      {/* <Link
           to="/activities"
           className="mb-28 mt-16 border text-center w-fit mx-auto border-[#EAECF0] py-2 rounded-[50px] px-8 md:px-[55px] text-[#EAECF0] text-base sm:text-xl md:text-2xl"
         >
           EXPLORE OUR ACTIVITIES
         </Link> */}
-        {/* </div> */}
+      {/* </div> */}
 
-        {/* How it works */}
-        <HowItWorks />
-        {/* Get Involved */}
-        <GetInvolved />
+      {/* How it works */}
+      <HowItWorks />
+      {/* Get Involved */}
+      <GetInvolved />
 
-        {/* Testimonials */}
-        <Testimonials />
+      {/* Testimonials */}
+      <Testimonials />
 
-        <form onSubmit={submitEmail} className="pt-28 px-[9.5vw] text-center">
-          <h2 className="text-center text-3xl md:text-[42px] md:leading-[100px] tracking-tight capitalize mb-6">
-            Subscribe to our newsletter!
-          </h2>
-          <p className="text-base md:text-xl text-[#D0D5DD] mb-6">
-            Get news and updates delivered to your mailbox.
-          </p>
-          <input
-            type="email"
-            value={userEmail}
-            id="email"
-            onChange={(e) => setUserEmail(e.target.value)}
-            placeholder="Your email address"
-            className=" w-full max-w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-2 md:py-3 rounded-lg"
-          />
-          <button
-            type="submit"
-            disabled={userEmail === ""}
-            className="px-[62.5px] block w-fit text-[#0e200a] mx-auto bg-[#6EE755] rounded-[30px] py-3 mt-8 shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)]"
-          >
-            Subscribe
-          </button>
-        </form>
-        <Contact />
-      </main>
-      <Footer />
-    </>
+      <form onSubmit={submitEmail} className="pt-28 px-[9.5vw] text-center">
+        <h2 className="text-center text-3xl md:text-[42px] md:leading-[100px] tracking-tight capitalize mb-6">
+          Subscribe to our newsletter!
+        </h2>
+        <p className="text-base md:text-xl text-[#D0D5DD] mb-6">
+          Get news and updates delivered to your mailbox.
+        </p>
+        <input
+          type="email"
+          value={userEmail}
+          id="email"
+          onChange={(e) => setUserEmail(e.target.value)}
+          placeholder="Your email address"
+          className=" w-full max-w-[360px] mx-auto outline-none text-[#475467] placeholder:text-[#475467] bg-[#FEF3F2] shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)] px-[14px] py-2 md:py-3 rounded-lg"
+        />
+        <button
+          type="submit"
+          disabled={userEmail === ""}
+          className="px-[62.5px] block w-fit text-[#0e200a] mx-auto bg-[#6EE755] rounded-[30px] py-3 mt-8 shadow-[0px_1px_2px] shadow-[rgba(16, 24, 40, 0.05)]"
+        >
+          Subscribe
+        </button>
+      </form>
+      <Contact />
+    </main>
   );
 }
