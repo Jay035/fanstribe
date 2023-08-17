@@ -12,7 +12,6 @@ import asset4 from "../assets/img-6.jpg";
 import { Power3, gsap } from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Transition from "../components/Transition";
 import "firebase/database";
 import { addDoc, collection } from "@firebase/firestore";
 import { db } from "../config/config";
@@ -63,8 +62,7 @@ export default function Home() {
   //   return () => ctx.revert();
   // }, []);
   return (
-    <main className="home flex flex-col gap-6">
-      <Transition />
+    <main className="flex flex-col gap-6">
       <HeroSection />
       <section
         // ref={container}

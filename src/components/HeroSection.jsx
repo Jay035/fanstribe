@@ -37,7 +37,7 @@ export function HeroSection() {
             Be more than a fan!{" "}
           </h1>
           <p
-            className="text text-[17px] md:text-2xl leading-normal text-white/90"
+            className="text text-sm md:text-2xl leading-normal text-white/90"
           >
             Fanstribe brings together sports enthusiasts around the world. Express your passion, explore, connect and interact with others fans who share interest in the same sport or even support the same team as you.
             Our passion is our driving force and Fanstribe is home to fans of everything sports including football, basketball, baseball, cricket, American football, racing, rugby, tennis, hockey, golf, boxing, etc. 

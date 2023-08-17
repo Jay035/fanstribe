@@ -4,7 +4,6 @@ import Transition from "../components/Transition";
 export default function AboutUs() {
   return (
     <main className="px-[9.5vw] mb-8 h-fit min-h-[90vh]">
-      <Transition />
       <section>
         <h2 className="text-center text-3xl md:text-[42px] leading-[100px] md:leading-[120px] tracking-tight capitalize mb-5">
           Partnerships

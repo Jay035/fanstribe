@@ -1,10 +1,8 @@
 import friends from "../assets/gathering.jpg";
-import Transition from "../components/Transition";
 
 export default function AboutUs() {
   return (
     <main>
-      <Transition />
       <div className="px-[9.5vw] mb-8 h-fit min-h-[90vh]">
         <section>
           <h2 className="text-center text-3xl md:text-[42px] leading-[100px] tracking-tight capitalize mb-5">

@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
+import Transition from "./components/Transition";
 
 const Home = lazy(() => import("./pages/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
@@ -22,6 +23,7 @@ function App() {
         <ScrollToTop />
         <ToastContainer />
         <Suspense fallback={<Loader />}>
+          <Transition />
           <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
