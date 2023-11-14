@@ -8,33 +8,44 @@ export function Benefits() {
       <div className="grid gap-4 text-center text-white">
         <div className=" border-t border-[#475467]">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
-            • Meet other fans{" "}
+            • Connect with other Fanstribe members{" "}
           </h5>
         </div>
         <div className=" border-t border-[#475467]">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
-            • Enjoy live match viewing experiences{" "}
+            • Build relationships and network{" "}
           </h5>
         </div>
         <div className=" border-t border-[#475467]">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
-            • Banter, participate in contests and win gifts{" "}
+            • Access to exclusive events and premium experiences{" "}
           </h5>
         </div>
 
         <div className=" border-t border-[#475467] ">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
-            • Party, enjoy good music, food and drinks{" "}
+            • Opportunity to serve your community and the world using sports as
+            a tool to drive change{" "}
           </h5>
         </div>
         <div className=" border-t border-[#475467] ">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
-            • Build a network and have lots of fun{" "}
+            • Develop new skills{" "}
+          </h5>
+        </div>
+        <div className=" border-t border-[#475467] ">
+          <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
+            • Participate in Fanstribe tournaments{" "}
+          </h5>
+        </div>
+        <div className=" border-t border-[#475467] ">
+          <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
+            • Become a super fan!{" "}
           </h5>
         </div>
         <div className=" border-y border-[#475467] ">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
-            • Learn about sports and fan culture{" "}
+            • A chance to meet your favorite athletes{" "}
           </h5>
         </div>
       </div>

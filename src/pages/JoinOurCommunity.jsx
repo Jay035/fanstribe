@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { addDoc, collection } from "@firebase/firestore";
 import { db } from "../config/config";
 import { toast } from "react-toastify";
@@ -6,12 +6,49 @@ import { useNavigate } from "react-router-dom";
 
 export default function JoinOurCommunity() {
   const navigate = useNavigate();
+  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [nameOfIndividual, setNameOfIndividual] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
+  const [dropdownHeader, setDropdownHeader] = useState("Abuja");
   const [country, setCountry] = useState("");
+  const dropdownRef = useRef(null);
   const communityRef = collection(db, "community-members");
+
+  const locations = [
+    {
+      id: 1,
+      state: "Abuja",
+    },
+    {
+      id: 2,
+      state: "Lagos",
+    },
+    {
+      id: 3,
+      state: "Port Harcourt",
+    },
+    {
+      id: 4,
+      state: "Owerri",
+    },
+    {
+      id: 5,
+      state: "Aba",
+    },
+  ];
+
+  const handleOptionClick = (value) => {
+    setDropdownHeader(value);
+    setIsDropDownOpen(false);
+  };
+
+  const handleOutsideClick = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDropDownOpen(false);
+    }
+  };
 
   const submitForm = async (e) => {
     e.preventDefault();
@@ -43,6 +80,13 @@ export default function JoinOurCommunity() {
     setPhoneNo("");
     setCountry("");
   };
+
+  useEffect(() => {
+    window.addEventListener("click", handleOutsideClick);
+    return () => {
+      window.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
 
   return (
     <main className="flex justify-center items-center px-[9.5vw] max-w-5xl mx-auto pb-12 h-fit min-h-[90vh] text-center">
@@ -110,7 +154,7 @@ export default function JoinOurCommunity() {
                 </p>
                 <input
                   id="phoneNo"
-                  type="number"
+                  type="text"
                   className="border outline-none text-white bg-white/10 border-[#7a7c86] rounded-lg px-2 py-1"
                   name="phoneNo"
                   value={phoneNo}
@@ -124,22 +168,62 @@ export default function JoinOurCommunity() {
 
               <label htmlFor="country" className="flex flex-col gap-3">
                 <p>
-                  Country<span className="text-[#F04438]">* </span>
+                  Location<span className="text-[#F04438]">* </span>
                 </p>
-                <input
-                  id="country"
-                  type="text"
-                  className="border outline-none text-white bg-white/10 border-[#7a7c86] rounded-lg px-2 py-1"
-                  name="country"
-                  value={country}
-                  onChange={(e) => {
-                    e.preventDefault();
-                    setCountry(e.target.value);
+                <div
+                  onClick={() => {
+                    setIsDropDownOpen(true);
+                    console.log("clicked", isDropDownOpen);
                   }}
-                  required
-                />
+                  ref={dropdownRef}
+                  className="cursor-pointer relative border outline-none text-white bg-white/10 border-[#7a7c86] rounded-lg px-2 py-1 h-[33.3px] "
+                >
+                  <h3
+                    className="font-normal"
+                  >
+                    {dropdownHeader}
+                  </h3>
+                  {isDropDownOpen && (
+                    <ul className="absolute top-10 left-0 w-full text-white bg-[#1a1a1a] rounded-lg flex flex-col gap-1 py-2">
+                      {locations?.map((option) => (
+                        <li
+                          key={option?.id}
+                          className={`px-3 py-1 cursor-pointer ${
+                            dropdownHeader === option?.state && "bg-white/10"
+                          }`}
+                          onClick={() => {
+                            handleOptionClick(option.state);
+                            setIsDropDownOpen((prevState) => !prevState);
+                          }}
+                        >
+                          {option.state}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </label>
             </div>
+            <label
+              htmlFor="country"
+              className="flex flex-col items-start gap-3"
+            >
+              <p>
+                Country<span className="text-[#F04438]">* </span>
+              </p>
+              <input
+                id="country"
+                type="text"
+                className="border w-full outline-none text-white bg-white/10 border-[#7a7c86] rounded-lg px-2 py-1"
+                name="country"
+                value={country}
+                onChange={(e) => {
+                  e.preventDefault();
+                  setCountry(e.target.value);
+                }}
+                required
+              />
+            </label>
 
             <button
               disabled={

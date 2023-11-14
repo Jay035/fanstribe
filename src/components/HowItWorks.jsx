@@ -13,9 +13,9 @@ export function HowItWorks() {
         {/* card 1 */}
         <div className=" text-center flex items-center flex-col py-8 md:py-0 md:px-8 w-full">
           <img src={zap} loading="lazy" alt="" />
-          <h2 className="text-white text-2xl mt-8 mb-2">Explore</h2>
+          <h2 className="text-white text-2xl mt-8 mb-2">Join</h2>
           <p className="text-[#D0D5DD] text-lg md:text-xl">
-            Explore events and get a ticket
+            Join our community by filling the membership form
           </p>
         </div>
         {/* card 2 */}
@@ -26,7 +26,8 @@ export function HowItWorks() {
             Access our events and activities
           </h2>
           <p className="text-[#D0D5DD] text-lg md:text-xl">
-            Get access to curated events and have unlimited fun
+            Attend monthly meetups in your city, get access to curated
+            events and have fun
           </p>
         </div>
       </div>
