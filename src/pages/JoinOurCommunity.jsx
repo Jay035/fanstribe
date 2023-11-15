@@ -3,6 +3,7 @@ import { addDoc, collection } from "@firebase/firestore";
 import { db } from "../config/config";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import confetti from "canvas-confetti";
 
 export default function JoinOurCommunity() {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ export default function JoinOurCommunity() {
   const [nameOfIndividual, setNameOfIndividual] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
-  const [dropdownHeader, setDropdownHeader] = useState("Abuja");
+  const [location, setLocation] = useState("Abuja");
   const [country, setCountry] = useState("");
   const dropdownRef = useRef(null);
   const communityRef = collection(db, "community-members");
@@ -40,14 +41,8 @@ export default function JoinOurCommunity() {
   ];
 
   const handleOptionClick = (value) => {
-    setDropdownHeader(value);
+    setLocation(value);
     setIsDropDownOpen(false);
-  };
-
-  const handleOutsideClick = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsDropDownOpen(false);
-    }
   };
 
   const submitForm = async (e) => {
@@ -57,7 +52,13 @@ export default function JoinOurCommunity() {
         name: nameOfIndividual,
         email: email,
         phoneNo: phoneNo,
+        location: location,
         country: country,
+      });
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
       });
       // toast.success(
       //   "Congratulations, you have submitted the form. You should receive an email soon."
@@ -80,13 +81,6 @@ export default function JoinOurCommunity() {
     setPhoneNo("");
     setCountry("");
   };
-
-  useEffect(() => {
-    window.addEventListener("click", handleOutsideClick);
-    return () => {
-      window.removeEventListener("click", handleOutsideClick);
-    };
-  }, []);
 
   return (
     <main className="flex justify-center items-center px-[9.5vw] max-w-5xl mx-auto pb-12 h-fit min-h-[90vh] text-center">
@@ -170,30 +164,46 @@ export default function JoinOurCommunity() {
                 <p>
                   Location<span className="text-[#F04438]">* </span>
                 </p>
-                <div
-                  onClick={() => {
-                    setIsDropDownOpen(true);
-                    console.log("clicked", isDropDownOpen);
-                  }}
-                  ref={dropdownRef}
-                  className="cursor-pointer relative border outline-none text-white bg-white/10 border-[#7a7c86] rounded-lg px-2 py-1 h-[33.3px] "
-                >
-                  <h3
-                    className="font-normal"
-                  >
-                    {dropdownHeader}
-                  </h3>
+                <div className="cursor-pointer relative border outline-none text-white bg-white/10 border-[#7a7c86] rounded-lg pl-2 py-1 h-[33.3px] ">
+                  <div className="relative">
+                    <h3
+                      onClick={() => {
+                        setIsDropDownOpen(!isDropDownOpen);
+                        console.log("clicked", isDropDownOpen);
+                      }}
+                      className="font-normal"
+                    >
+                      {location}
+                    </h3>
+                    <svg
+                      className={`absolute top-0 right-1 transition-transform ${
+                        isDropDownOpen && "rotate-180"
+                      }`}
+                      width="28"
+                      height="28"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4 6L8 10L12 6"
+                        stroke="#A0A0AB"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
                   {isDropDownOpen && (
                     <ul className="absolute top-10 left-0 w-full text-white bg-[#1a1a1a] rounded-lg flex flex-col gap-1 py-2">
                       {locations?.map((option) => (
                         <li
                           key={option?.id}
                           className={`px-3 py-1 cursor-pointer ${
-                            dropdownHeader === option?.state && "bg-white/10"
+                            location === option?.state && "bg-white/10"
                           }`}
                           onClick={() => {
                             handleOptionClick(option.state);
-                            setIsDropDownOpen((prevState) => !prevState);
+                            // setIsDropDownOpen((prevState) => !prevState);
                           }}
                         >
                           {option.state}
@@ -230,10 +240,11 @@ export default function JoinOurCommunity() {
                 (nameOfIndividual === "") |
                 (email === "") |
                 (phoneNo === "") |
+                (location === "") |
                 (country === "")
               }
               type="submit"
-              className="w-fit mx-auto text-lg text-[#0e200a] font-medium mt-6 bg-[#6de755d0] disabled:bg-[#6de755d0]/50 hover:bg-[#6de755d0]/90 px-12 py-3 rounded-lg"
+              className="w-fit mx-auto text-lg text-[#0e200a] font-medium mt-6 bg-[#6de755d0] disabled:bg-[#6de755d0]/50 hover:bg-[#6de755d0]/90 px-8 sm:px-12 py-2 sm:py-3 rounded-lg"
             >
               Submit form
             </button>
