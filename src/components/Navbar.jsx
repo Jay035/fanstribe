@@ -75,32 +75,30 @@ export function Navbar() {
             </NavLink>
           </p>
           <p
-            className="list_item"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
             }}
+            className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
           >
-            <NavLink
+            {/* <NavLink
               to="/"
-              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
-            >
-              News
-            </NavLink>
+            > */}
+            News
+            {/* </NavLink> */}
           </p>
           <p
-            className="list_item"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
             }}
+            className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
           >
-            <NavLink
+            {/* <NavLink
               to="/"
-              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
-            >
-              Shop
-            </NavLink>
+            > */}
+            Shop
+            {/* </NavLink> */}
           </p>
           <p
             className="list_item"
@@ -136,27 +134,27 @@ export function Navbar() {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
             }}
+            className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
           >
-            <NavLink
-              to="/"
-              className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
-            >
-              Donations
-            </NavLink>
+            {/* <NavLink
+              to="#"
+            > */}
+            Donations
+            {/* </NavLink> */}
           </p>
 
           <p
+            className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
             }}
           >
-            <NavLink
+            {/* <NavLink
               to="/"
-              className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
-            >
-              Blog
-            </NavLink>
+            > */}
+            Blog
+            {/* </NavLink> */}
           </p>
 
           {/* <p
