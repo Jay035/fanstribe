@@ -8,24 +8,23 @@ export function Benefits() {
       <div className="grid gap-4 text-center text-white">
         <div className=" border-t border-[#475467]">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
-            • Connect with other Fanstribe members{" "}
+            • Meet other fans{" "}
           </h5>
         </div>
         <div className=" border-t border-[#475467]">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
-            • Build relationships and network{" "}
+            • Enjoy live match viewing experiences{" "}
           </h5>
         </div>
         <div className=" border-t border-[#475467]">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
-            • Access to exclusive events and premium experiences{" "}
+            • Party, banter, participate in contests and win gifts{" "}
           </h5>
         </div>
 
         <div className=" border-t border-[#475467] ">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
-            • Opportunity to serve your community and the world using sports as
-            a tool to drive change{" "}
+            • Build relationships and network{" "}
           </h5>
         </div>
         <div className=" border-t border-[#475467] ">
@@ -35,17 +34,17 @@ export function Benefits() {
         </div>
         <div className=" border-t border-[#475467] ">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
-            • Participate in Fanstribe tournaments{" "}
+            • Participate in tournaments{" "}
           </h5>
         </div>
         <div className=" border-t border-[#475467] ">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
-            • Become a super fan!{" "}
+            • Get curated sports updates{" "}
           </h5>
         </div>
         <div className=" border-y border-[#475467] ">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
-            • A chance to meet your favorite athletes{" "}
+            • Meet your favorite athletes{" "}
           </h5>
         </div>
       </div>

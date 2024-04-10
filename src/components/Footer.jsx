@@ -33,7 +33,7 @@ export default function Footer() {
       </div>
 
       <p className="font-medium text-sm mt-3">
-        © 2023 – Fanstribe. All rights reserved
+        © 2024 – Fanstribe. All rights reserved
       </p>
     </section>
   );

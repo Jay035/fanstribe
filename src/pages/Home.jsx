@@ -75,10 +75,10 @@ export default function Home() {
           </h2>
           <p className="text-[#D0D5DD] text-lg lg:text-2xl mb-8">
             Connect with sports fans across the globe who share the same passion
-            and interests as you. Get access to curated events where you
-            connect, chill and socialize with other fans. Find events in your
-            area, connect, party, enjoy live match viewing experiences, play
-            games, banter and enjoy being a fan at a premium level.
+            and interests as you. Stay updated with the latest sports news,
+            attend events in your area, connect, party, enjoy live match viewing
+            experiences, play games, banter and enjoy being a fan at a premium
+            level.{" "}
           </p>
         </div>
 
@@ -132,7 +132,7 @@ export default function Home() {
           Subscribe to our newsletter!
         </h2>
         <p className="text-base md:text-xl text-[#D0D5DD] mb-6">
-          Get news and updates delivered to your mailbox.
+          Get refreshing updates from Fanstribe delivered to your inbox
         </p>
         <input
           type="email"

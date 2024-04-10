@@ -12,10 +12,10 @@ export function Testimonials() {
       <div className="grid gap-14 lg:gap-10 px-6 lg:grid-cols-3">
         <div className="text-left w-full flex flex-col lg:justify-between gap-6 lg:min-w-[260px]">
           <h2 className=" text-lg lg:text-2xl h-fit">
-            “ Fanstribe gives me access to premium experiences as a football
-            fan. I’ve been able to meet other fans that support the same team as
-            me and I’ve also picked an interest in basketball after watching a
-            couple of games. ”
+            “Fanstribe gives me access to premium experiences as a football fan.
+            I’ve been able to meet other fans that support the same team as me
+            and I’ve also picked an interest in basketball after watching a
+            couple of games”.
           </h2>
           <div className="flex gap-3 items-center">
             <img
@@ -32,8 +32,8 @@ export function Testimonials() {
         </div>
         <div className="text-left w-full lg:min-w-[260px] flex lg:justify-between flex-col gap-6 border-y border-[#344054] py-8 lg:border-y-0 lg:border-x lg:px-8 lg:py-0">
           <h2 className=" text-lg lg:text-2xl h-fit">
-            “ Being a fan got more interesting with Fanstribe. I’ve had so much
-            fun while connecting and vibing with other fans. ”
+            “Being a fan got more interesting with Fanstribe. I’ve had so much
+            fun while connecting and vibing with other fans”.{" "}
           </h2>
           <div className="flex gap-3 items-center">
             <img
@@ -50,8 +50,8 @@ export function Testimonials() {
         </div>
         <div className="text-left w-full flex flex-col justify-between gap-6 lg:min-w-[260px]">
           <h2 className=" text-lg lg:text-2xl h-fit">
-            “ Fanstribe is all about entertainment. It unites fans in a special
-            way and I’m proud to be a part of this unique community. ”
+            “Fanstribe is all about entertainment. It unites fans in a special
+            way and I’m proud to be a part of this unique community”.{" "}
           </h2>
           <div className="flex gap-3 items-center">
             <img

@@ -16,7 +16,7 @@ export default function AboutUs() {
             experiences. Fans want to explore, get access to more content and
             action. Fanstribe gives fans a platform to enjoy their favorite
             sport, support their favorite teams and athletes while connecting
-            with millions of fans just like them across the globe.
+            with millions of fans just like them across the globe.{" "}
           </p>
         </section>
         <section>

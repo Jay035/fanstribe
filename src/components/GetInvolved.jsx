@@ -11,7 +11,7 @@ export function GetInvolved() {
         <p className="text-lg md:text-xl text-[#D0D5DD] mb-6">
           We are looking to build fan culture and take fan experiences to a
           different level. Meet other fans, build friendships and have fun as
-          well as other perks
+          well as other perks.
         </p>
         <Link
           to="/activities"

@@ -10,9 +10,10 @@ export default function AboutUs() {
           <span className="p-[3px] text-[1px] ml-[4px] mb-[1px] bg-[#6EE755]"></span>
         </h2>
         <p className="text-base md:text-xl text-[#D0D5DD] mb-8">
-          We look to work with brands that would like to partner or provide
-          sponsorship to drive our vision of uniting sports fans across the
-          world. Send an email to{" "}
+          We look to work with brands and individuals who would like to partner
+          or provide sponsorship to drive our vision of connecting and creating
+          amazing experiences for sports fans across the world. Please send an
+          email to{" "}
           <a href="mailto:partnerships@fanstribe.co" className="font-bold">
             partnerships@fanstribe.co
           </a>{" "}

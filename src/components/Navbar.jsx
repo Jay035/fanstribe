@@ -46,7 +46,7 @@ export function Navbar() {
         } absolute top-0 bg-[#11141d] lg:bg-transparent lg:relative h-screen lg:h-fit w-full lg:w-fit ease-in-out flex flex-col lg:flex-row lg:gap-12 lg:justify-between lg:items-center text-base md:text-lg`}
       >
         <div className="flex flex-col items-center gap-6 mt-40 lg:mt-0 lg:flex-row">
-          <p
+          {/* <p
             className="list_item"
             onClick={(e) => {
               e.preventDefault();
@@ -59,7 +59,7 @@ export function Navbar() {
             >
               Home
             </NavLink>
-          </p>
+          </p> */}
           <p
             className="list_item"
             onClick={(e) => {
@@ -72,6 +72,34 @@ export function Navbar() {
               className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
             >
               About us
+            </NavLink>
+          </p>
+          <p
+            className="list_item"
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen((prevState) => !prevState);
+            }}
+          >
+            <NavLink
+              to="/"
+              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
+            >
+              News
+            </NavLink>
+          </p>
+          <p
+            className="list_item"
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen((prevState) => !prevState);
+            }}
+          >
+            <NavLink
+              to="/"
+              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
+            >
+              Shop
             </NavLink>
           </p>
           <p
@@ -102,6 +130,35 @@ export function Navbar() {
               Activities
             </NavLink>
           </p>
+
+          <p
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen((prevState) => !prevState);
+            }}
+          >
+            <NavLink
+              to="/"
+              className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
+            >
+              Donations
+            </NavLink>
+          </p>
+
+          <p
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen((prevState) => !prevState);
+            }}
+          >
+            <NavLink
+              to="/"
+              className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
+            >
+              Blog
+            </NavLink>
+          </p>
+
           {/* <p
             className="list_item"
             onClick={(e) => {
@@ -116,19 +173,7 @@ export function Navbar() {
               Join our community
             </NavLink>
           </p>
-          <p
-            onClick={(e) => {
-              e.preventDefault();
-              setMenuOpen((prevState) => !prevState);
-            }}
-          >
-            <NavLink
-              to="/"
-              className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
-            >
-              Blog
-            </NavLink>
-          </p> */}
+           */}
         </div>
 
         {/* CTA buttons */}
