@@ -89,7 +89,7 @@ export default function Home() {
             alt="people having fun"
           />
         </div>
-        <div className="card card_3">
+        {/* <div className="card card_3">
           <img
             className="h-screen object-cover w-full object-center"
             src={asset2}
@@ -102,7 +102,7 @@ export default function Home() {
             src={asset3}
             alt="people having fun"
           />
-        </div>
+        </div> */}
       </section>
 
       {/* What you get */}
@@ -120,7 +120,7 @@ export default function Home() {
       {/* </div> */}
 
       {/* How it works */}
-      <HowItWorks />
+      {/* <HowItWorks /> */}
       {/* Get Involved */}
       <GetInvolved />
 

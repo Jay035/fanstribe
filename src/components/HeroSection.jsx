@@ -48,12 +48,12 @@ export function HeroSection() {
           >
             Our passion is our driving force and Fanstribe is home to fans of everything sports including football, basketball, baseball, cricket, American football, racing, rugby, tennis, hockey, golf, boxing, etc.
           </p> */}
-          <Link
+          {/* <Link
             to="/join"
             className="text font-bold text-white px-8 bg-[#6de755d0] py-2 text-lg rounded-[50px] md:text-2xl mt-4 hover:bg-[#6EE755]/75"
           >
             GET STARTED
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>
