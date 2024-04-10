@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import heroImg from "../assets/hero.jpg";
+import heroImg from "../assets/hero-img.png";
 import { useEffect, useRef } from "react";
 import { Power3, gsap } from "gsap";
 import { useLayoutEffect } from "react";
