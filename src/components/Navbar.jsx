@@ -102,7 +102,7 @@ export function Navbar() {
               Activities
             </NavLink>
           </p>
-          <p
+          {/* <p
             className="list_item"
             onClick={(e) => {
               e.preventDefault();
@@ -116,7 +116,7 @@ export function Navbar() {
               Join our community
             </NavLink>
           </p>
-          {/* <p
+          <p
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
