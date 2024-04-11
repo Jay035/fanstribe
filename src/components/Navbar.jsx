@@ -61,6 +61,19 @@ export function Navbar() {
             </NavLink>
           </p> */}
           <p
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen((prevState) => !prevState);
+            }}
+            className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
+          >
+            {/* <NavLink
+              to="/"
+            > */}
+            News
+            {/* </NavLink> */}
+          </p>
+          <p
             className="list_item"
             onClick={(e) => {
               e.preventDefault();
@@ -73,19 +86,6 @@ export function Navbar() {
             >
               About us
             </NavLink>
-          </p>
-          <p
-            onClick={(e) => {
-              e.preventDefault();
-              setMenuOpen((prevState) => !prevState);
-            }}
-            className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
-          >
-            {/* <NavLink
-              to="/"
-            > */}
-            News
-            {/* </NavLink> */}
           </p>
           <p
             onClick={(e) => {
