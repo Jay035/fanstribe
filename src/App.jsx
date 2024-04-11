@@ -11,6 +11,7 @@ import Transition from "./components/Transition";
 
 const Home = lazy(() => import("./pages/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
+const Donate = lazy(() => import("./pages/Donate"));
 const Partnerships = lazy(() => import("./pages/Partnerships"));
 const Events = lazy(() => import("./pages/Events"));
 const Activities = lazy(() => import("./pages/Activities"));
@@ -28,6 +29,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/aboutUs" element={<AboutUs />} />
+            <Route path="/donate" element={<Donate />} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/partnerships" element={<Partnerships />} />
             <Route path="/events" element={<Events />} />

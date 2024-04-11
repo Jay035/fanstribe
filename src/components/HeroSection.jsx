@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import heroImg from "../assets/hero-img.png";
+import heroImg from "../assets/hero-img.jpg";
 import { useEffect, useRef } from "react";
 import { Power3, gsap } from "gsap";
 import { useLayoutEffect } from "react";
@@ -32,10 +32,10 @@ export function HeroSection() {
         alt="hero img"
       />
       {/* hero container */}
-      <div className="hero-container absolute top-0 text-center h-screen px-6 sm:px-14 md:px-24 w-full mx-auto">
+      <div className="hero-container bg-black/50 backdrop-blur-[1px] absolute top-0 text-center h-screen px-6 sm:px-14 md:px-24 w-full mx-auto">
         <div className="max-w-4xl z-[99999999] mx-auto mt-20 lg:mt-32 tracking-wide flex flex-col items-center gap-4 ">
           <h1 className="text text-5xl xl:text-[110.667px] leading-[1.2] md:text-5xl xl:text-6xl xl:leading-snug text-white">
-            Be more!{" "}
+            Be More!{" "}
           </h1>
           <p className="text text-sm md:text-2xl leading-normal text-white/90">
             Fanstribe delivers premium sports content and brings together sports

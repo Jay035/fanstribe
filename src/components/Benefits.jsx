@@ -42,7 +42,7 @@ export function Benefits() {
             • Get curated sports updates{" "}
           </h5>
         </div>
-        <div className=" border-y border-[#475467] ">
+        <div className=" border-t border-[#475467] ">
           <h5 className="text-2xl md:text-3xl lg:text-5xl py-7">
             • Meet your favorite athletes{" "}
           </h5>

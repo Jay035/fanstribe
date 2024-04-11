@@ -33,19 +33,17 @@ export function Navbar() {
       ref={nav}
       className="flex justify-between items-center bg-[#06070B] tracking-tight w-full gap-x-12 py-6 px-[9.5vw]"
     >
-      <section>
-        <Link to="/">
-          <img src={navlogo} alt="logo" loading="lazy" className="w-12" />
-        </Link>
-      </section>
+      <Link to="/">
+        <img src={navlogo} alt="logo" loading="lazy" className="w-12" />
+      </Link>
       <section
         className={`${
           menuOpen
-            ? `left-0 px-8 pt-8 gap-6 opacity-100 z-40 ease-out lg:pt-0 transition-all duration-100 delay-75`
-            : `-left-full opacity-0 lg:opacity-100 lg:left-0 transition-all duration-100 delay-75`
-        } absolute top-0 bg-[#11141d] lg:bg-transparent lg:relative h-screen lg:h-fit w-full lg:w-fit ease-in-out flex flex-col lg:flex-row lg:gap-12 lg:justify-between lg:items-center text-base md:text-lg`}
+            ? `left-0 px-8 pt-8 gap-6 opacity-100 z-40 ease-out xl:pt-0 transition-all duration-100 delay-75`
+            : `-left-full opacity-0 xl:opacity-100 xl:left-0 transition-all duration-100 delay-75`
+        } absolute top-0 bg-[#11141d] xl:bg-transparent xl:relative h-screen xl:h-fit w-full xl:w-fit ease-in-out flex flex-col xl:flex-row xl:gap-12 xl:justify-between xl:items-center text-base md:text-lg`}
       >
-        <div className="flex flex-col items-center gap-6 mt-40 lg:mt-0 lg:flex-row">
+        <div className="flex flex-col items-center gap-6 mt-40 xl:mt-0 xl:flex-row uppercase font-medium">
           {/* <p
             className="list_item"
             onClick={(e) => {
@@ -136,11 +134,7 @@ export function Navbar() {
             }}
             className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
           >
-            {/* <NavLink
-              to="#"
-            > */}
-            Donations
-            {/* </NavLink> */}
+            <NavLink to="/donate">Donations</NavLink>
           </p>
 
           <p
@@ -176,7 +170,7 @@ export function Navbar() {
 
         {/* CTA buttons */}
         <button
-          className="mt-6 lg:hidden"
+          className="mt-6 xl:hidden"
           onClick={(e) => {
             e.preventDefault();
             setMenuOpen((prevState) => !prevState);
@@ -194,7 +188,7 @@ export function Navbar() {
 
       {/* CTA buttons */}
       <button
-        className="hidden lg:flex list_item"
+        className="hidden xl:flex list_item"
         onClick={(e) => {
           e.preventDefault();
           setMenuOpen((prevState) => !prevState);
@@ -210,7 +204,7 @@ export function Navbar() {
       </button>
       <div
         ref={(el) => (hamburger = el)}
-        className="z-50 flex flex-col gap-1 items-center cursor-pointer lg:hidden"
+        className="z-50 flex flex-col gap-1 items-center cursor-pointer xl:hidden"
         onClick={(e) => {
           e.preventDefault();
           setMenuOpen((prevState) => !prevState);

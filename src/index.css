@@ -46,3 +46,7 @@ h1,
 h2 {
   font-family: "Anton", sans-serif;
 }
+
+li span{
+  @apply text-white/100
+}
