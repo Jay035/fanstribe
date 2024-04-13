@@ -1,6 +1,6 @@
 export default function Donate() {
   return (
-    <main className="px-[9.5vw] mb-8 h-fit min-h-[90vh]">
+    <main className="px-[9.5vw] mb-16 h-fit min-h-[90vh]">
       <h2 className="text-center text-3xl md:text-[42px] leading-[100px] tracking-tight capitalize mb-5">
         Fanstribe Development Fund
         {/* <span className="p-[3px] text-[1px] ml-[4px] mb-[1px] bg-[#6EE755]"></span> */}

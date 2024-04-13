@@ -71,20 +71,7 @@ export function Navbar() {
             News
             {/* </NavLink> */}
           </p>
-          <p
-            className="list_item"
-            onClick={(e) => {
-              e.preventDefault();
-              setMenuOpen((prevState) => !prevState);
-            }}
-          >
-            <NavLink
-              to="/aboutUs"
-              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
-            >
-              About us
-            </NavLink>
-          </p>
+
           <p
             onClick={(e) => {
               e.preventDefault();
@@ -166,6 +153,20 @@ export function Navbar() {
             </NavLink>
           </p>
            */}
+          <p
+            className="list_item"
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen((prevState) => !prevState);
+            }}
+          >
+            <NavLink
+              to="/aboutUs"
+              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
+            >
+              About us
+            </NavLink>
+          </p>
         </div>
 
         {/* CTA buttons */}
