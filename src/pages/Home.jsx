@@ -73,7 +73,7 @@ export default function Home() {
             Bringing Fans Together{" "}
             <span className="p-[3px] text-[1px] ml-[2px] mb-[1px] bg-[#6EE755]"></span>
           </h2>
-          <p className="text-[#D0D5DD] text-lg lg:text-2xl mb-8">
+          <p className="text-[#D0D5DD] text-xl lg:text-2xl mb-8">
             Connect with sports fans across the globe who share the same passion
             and interests as you. Stay updated with the latest sports news,
             attend events in your area, connect, party, enjoy live match viewing
