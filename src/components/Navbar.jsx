@@ -1,9 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Power3, gsap } from "gsap";
 import { useRef } from "react";
-import { useLayoutEffect } from "react";
 import navlogo from "../assets/logo.png";
 import { useGSAP } from "@gsap/react";
 
@@ -14,17 +13,17 @@ export function Navbar() {
   let hamburger = useRef(null);
   let nav = useRef(null);
 
-  useGSAP(() => {
-    gsap.from(".list_item", {
-      opacity: 0,
-      duration: 2,
-      y: 80,
-      stagger: {
-        amount: 0.4,
-      },
-      ease: Power3,
-    });
-  });
+  // useGSAP(() => {
+  //   gsap.from(".list_item", {
+  //     opacity: 0,
+  //     duration: 2,
+  //     y: 80,
+  //     stagger: {
+  //       amount: 0.4,
+  //     },
+  //     ease: Power3,
+  //   });
+  // }, {scope: nav});
 
   return (
     <nav
@@ -41,89 +40,67 @@ export function Navbar() {
             : `-left-full opacity-0 xl:opacity-100 xl:left-0 transition-all duration-100 delay-75`
         } absolute top-0 bg-[#11141d] xl:bg-transparent xl:relative h-screen xl:h-fit w-full xl:w-fit ease-in-out flex flex-col xl:flex-row xl:gap-12 xl:justify-between xl:items-center text-base md:text-lg`}
       >
-        <div className="flex flex-col items-center gap-6 mt-40 xl:mt-0 xl:flex-row uppercase font-medium">
-          {/* <p
-            className="list_item"
+        <ul className="flex flex-col items-center gap-6 mt-40 xl:mt-0 xl:flex-row uppercase font-medium">
+          <li
+            className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
             }}
           >
-            <NavLink
-              to="/"
-              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
-            >
-              Home
-            </NavLink>
-          </p> */}
-          <p
+            <NavLink to="/aboutUs">About us</NavLink>
+          </li>
+          {/* <li
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
             }}
             className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
           >
-            {/* <NavLink
-              to="/"
-            > */}
             News
-            {/* </NavLink> */}
-          </p>
+          </li> */}
 
-          <p
+          {/* <li
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
             }}
             className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
           >
-            {/* <NavLink
-              to="/"
-            > */}
+           
             Shop
-            {/* </NavLink> */}
-          </p>
-          <p
-            className="list_item"
+          </li> */}
+          <li
+            className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
             }}
           >
-            <NavLink
-              to="/events"
-              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
-            >
-              Events
-            </NavLink>
-          </p>
-          <p
-            className="list_item"
+            <NavLink to="/events">Events</NavLink>
+          </li>
+          <li
+            className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
             }}
           >
-            <NavLink
-              to="/activities"
-              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
-            >
-              Activities
-            </NavLink>
-          </p>
+            <NavLink to="/activities">Activities</NavLink>
+          </li>
 
-          <p
+          {/* <li
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
             }}
-            className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
+            className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
           >
             <NavLink to="/donate">Donations</NavLink>
-          </p>
+          </li> */}
 
-          <p
-            className="list_item text-[#EAECF0] w-fit transition-colors hover:text-[#FFC0B6]"
+          <li
+            className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -134,10 +111,11 @@ export function Navbar() {
             > */}
             Blog
             {/* </NavLink> */}
-          </p>
+          </li>
 
-          {/* <p
-            className="list_item"
+          {/* <li
+            className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
+           
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((prevState) => !prevState);
@@ -145,27 +123,12 @@ export function Navbar() {
           >
             <NavLink
               to="/join"
-              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
-            >
+               >
               Join our community
             </NavLink>
-          </p>
+          </li>
            */}
-          <p
-            className="list_item"
-            onClick={(e) => {
-              e.preventDefault();
-              setMenuOpen((prevState) => !prevState);
-            }}
-          >
-            <NavLink
-              to="/aboutUs"
-              className=" text-[#EAECF0] w-fit transition-colors hover:text-[#5eb84c]"
-            >
-              About us
-            </NavLink>
-          </p>
-        </div>
+        </ul>
 
         {/* CTA buttons */}
         <button

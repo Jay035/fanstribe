@@ -76,17 +76,16 @@ export default function Home() {
     gsap.from(".hero_subtext", {
       delay: 0.5,
     });
-
   });
+  
   useGSAP(() => {
-
     let panels = gsap.utils.toArray(".card").forEach((wrapper, i) => {
       ScrollTrigger.create({
         trigger: wrapper,
         start: "top top",
         pin: true,
         pinSpacing: false,
-        end: '+=500',
+        end: "+=500",
         // markers: true,
         snap: 1,
       });
@@ -102,7 +101,7 @@ export default function Home() {
         },
       });
     });
-  })
+  });
 
   // useEffect(() => {
   //   let ctx = gsap.context(() => {
