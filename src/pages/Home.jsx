@@ -16,6 +16,7 @@ import "firebase/database";
 import { addDoc, collection } from "@firebase/firestore";
 import { db } from "../config/config";
 import { toast } from "react-toastify";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,6 +36,73 @@ export default function Home() {
       toast.error(err.message);
     }
   };
+
+  useGSAP(() => {
+    // const splitTypes = document.querySelectorAll(".reveal_type");
+
+    // splitTypes.forEach((char, i) => {
+    //   const text = new SplitType(char, { type: "char" });
+
+    //   gsap.from(text.chars, {
+    //     scrollTrigger: {
+    //       trigger: char,
+    //       start: "top 80%",
+    //       end: "bottom 20%",
+    //       scrub: true,
+    //       markers: false,
+    //     },
+    //     scaleY: 0,
+    //     y: -10,
+    //     transformOrigin: "top",
+    //     stagger: 0.1,
+    //     duration: 2
+    //   });
+    // });
+
+    // gsap.from(".benefit_text", {
+    //   opacity: .2
+    // })
+
+    gsap.from(".text", {
+      duration: 1,
+      opacity: 0.3,
+      scaleY: 0,
+      y: -10,
+      transformOrigin: "top",
+      stagger: 0.4,
+      ease: Power3,
+    });
+
+    gsap.from(".hero_subtext", {
+      delay: 0.5,
+    });
+
+  });
+  useGSAP(() => {
+
+    let panels = gsap.utils.toArray(".card").forEach((wrapper, i) => {
+      ScrollTrigger.create({
+        trigger: wrapper,
+        start: "top top",
+        pin: true,
+        pinSpacing: false,
+        end: '+=500',
+        markers: true,
+        snap: 1,
+      });
+
+      gsap.from(wrapper.children, {
+        // scale: "1.1",
+        ease: Power3.easeOut,
+        scrollTrigger: {
+          trigger: wrapper,
+          start: "top center",
+          end: "top top",
+          toggleActions: "play none reverse reset",
+        },
+      });
+    });
+  })
 
   // useEffect(() => {
   //   let ctx = gsap.context(() => {
@@ -65,7 +133,7 @@ export default function Home() {
     <main className="flex flex-col gap-6">
       <HeroSection />
       <section
-        // ref={container}
+        ref={container}
         className="text-center overflow-hidden py-6 sm:py-14 mx-auto "
       >
         <div className="px-[9.5vw] mb-20">
@@ -89,7 +157,7 @@ export default function Home() {
             alt="people having fun"
           />
         </div>
-        {/* <div className="card card_3">
+        <div className="card card_3">
           <img
             className="h-screen object-cover w-full object-center"
             src={asset2}
@@ -102,7 +170,7 @@ export default function Home() {
             src={asset3}
             alt="people having fun"
           />
-        </div> */}
+        </div>
       </section>
 
       {/* What you get */}

@@ -19,12 +19,12 @@ const JoinOurCommunity = lazy(() => import("./pages/JoinOurCommunity"));
 
 function App() {
   return (
-    <div className="scroll-smooth bg-[#06070B] text-white/90 h-full w-full">
+    <div className="text-white/90 h-full w-full">
       <Router>
         <ScrollToTop />
         <ToastContainer />
         <Suspense fallback={<Loader />}>
-          <Transition />
+          {/* <Transition /> */}
           <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />

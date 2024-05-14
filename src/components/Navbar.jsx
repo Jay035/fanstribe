@@ -5,6 +5,7 @@ import { Power3, gsap } from "gsap";
 import { useRef } from "react";
 import { useLayoutEffect } from "react";
 import navlogo from "../assets/logo.png";
+import { useGSAP } from "@gsap/react";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,20 +14,17 @@ export function Navbar() {
   let hamburger = useRef(null);
   let nav = useRef(null);
 
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.from(".list_item", {
-        opacity: 0,
-        duration: 2,
-        y: 80,
-        stagger: {
-          amount: 0.4,
-        },
-        ease: Power3,
-      });
-    }, nav);
-    return () => ctx.revert();
-  }, []);
+  useGSAP(() => {
+    gsap.from(".list_item", {
+      opacity: 0,
+      duration: 2,
+      y: 80,
+      stagger: {
+        amount: 0.4,
+      },
+      ease: Power3,
+    });
+  });
 
   return (
     <nav

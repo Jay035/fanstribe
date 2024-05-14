@@ -12,13 +12,6 @@
 }
 
 
-body {
-  /* font-family: "Open Sans", sans-serif; */
-  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
 ::-webkit-scrollbar {
   width: 15px;
   height: 2px;
@@ -39,6 +32,12 @@ body {
 
 .active{
   color: #5eb84c;
+}
+
+
+body {
+  @apply bg-[#06070B] scroll-smooth overflow-x-hidden overflow-y-scroll;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
 }
 
 
