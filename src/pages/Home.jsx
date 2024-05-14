@@ -87,7 +87,7 @@ export default function Home() {
         pin: true,
         pinSpacing: false,
         end: '+=500',
-        markers: true,
+        // markers: true,
         snap: 1,
       });
 
