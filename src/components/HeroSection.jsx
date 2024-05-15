@@ -12,7 +12,7 @@ export function HeroSection() {
       {/* hero container */}
       <div className="hero-container bg-black/60 backdrop-blur-[1px] absolute top-0 text-center h-[80vh] px-6 sm:px-14 md:px-24 w-full mx-auto">
         <div className="max-w-4xl z-[99999999] mx-auto mt-20 lg:mt-32 tracking-wide flex flex-col items-center gap-4 ">
-          <h1 className="text text-5xl xl:text-[110.667px] leading-[1.2] md:text-5xl xl:text-6xl xl:leading-snug text-white">
+          <h1 id="heading" className="text text-5xl xl:text-[110.667px] leading-[1.2] md:text-5xl xl:text-6xl xl:leading-snug text-white">
             Be More!{" "}
           </h1>
           <p className="hero_subtext text text-lg md:text-2xl leading-normal text-white/90">

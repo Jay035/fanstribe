@@ -38,7 +38,17 @@ export default function Home() {
   };
 
   useGSAP(() => {
-    // const splitTypes = document.querySelectorAll(".reveal_type");
+    const heading = new SplitType('#heading', { types: "words" });
+    const paragraph = new SplitType('p', { types: "lines" });
+    const heroElements = [...heading.words, ...paragraph.lines]
+
+    gsap.from(heroElements, {
+      y: 24,
+      opacity: 0,
+      duration: .8,
+      stagger: {amount: 1},
+      ease: 'ease'
+    })
 
     // splitTypes.forEach((char, i) => {
     //   const text = new SplitType(char, { type: "char" });
@@ -63,45 +73,45 @@ export default function Home() {
     //   opacity: .2
     // })
 
-    gsap.from(".text", {
-      duration: 1,
-      opacity: 0.3,
-      scaleY: 0,
-      y: -10,
-      transformOrigin: "top",
-      stagger: 0.4,
-      ease: Power3,
-    });
+    // gsap.from(".text", {
+    //   duration: 1,
+    //   opacity: 0.3,
+    //   scaleY: 0,
+    //   y: -10,
+    //   transformOrigin: "top",
+    //   stagger: 0.4,
+    //   ease: Power3,
+    // });
 
-    gsap.from(".hero_subtext", {
-      delay: 0.5,
-    });
+    // gsap.from(".hero_subtext", {
+    //   delay: 0.5,
+    // });
   });
   
-  useGSAP(() => {
-    let panels = gsap.utils.toArray(".card").forEach((wrapper, i) => {
-      ScrollTrigger.create({
-        trigger: wrapper,
-        start: "top top",
-        pin: true,
-        pinSpacing: false,
-        end: "+=500",
-        // markers: true,
-        snap: 1,
-      });
+  // useGSAP(() => {
+  //   let panels = gsap.utils.toArray(".card").forEach((wrapper, i) => {
+  //     ScrollTrigger.create({
+  //       trigger: wrapper,
+  //       start: "top top",
+  //       pin: true,
+  //       pinSpacing: false,
+  //       end: "+=500",
+  //       // markers: true,
+  //       snap: 1,
+  //     });
 
-      gsap.from(wrapper.children, {
-        // scale: "1.1",
-        ease: Power3.easeOut,
-        scrollTrigger: {
-          trigger: wrapper,
-          start: "top center",
-          end: "top top",
-          toggleActions: "play none reverse reset",
-        },
-      });
-    });
-  });
+  //     gsap.from(wrapper.children, {
+  //       // scale: "1.1",
+  //       ease: Power3.easeOut,
+  //       scrollTrigger: {
+  //         trigger: wrapper,
+  //         start: "top center",
+  //         end: "top top",
+  //         toggleActions: "play none reverse reset",
+  //       },
+  //     });
+  //   });
+  // });
 
   // useEffect(() => {
   //   let ctx = gsap.context(() => {
@@ -156,7 +166,7 @@ export default function Home() {
             alt="people having fun"
           />
         </div>
-        <div className="card card_3">
+        {/* <div className="card card_3">
           <img
             className="h-screen object-cover w-full object-center"
             src={asset2}
@@ -169,7 +179,7 @@ export default function Home() {
             src={asset3}
             alt="people having fun"
           />
-        </div>
+        </div> */}
       </section>
 
       {/* What you get */}
